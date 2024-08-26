@@ -46,6 +46,13 @@
             background-color: $white-color;
         }
     }
+    &--green {
+        background-color: $dark-green-color;
+        color: $white-color;
+        &::after {
+            background-color: $dark-green-color;
+        }
+    }
 }
 .btn-text {
     &:link,
