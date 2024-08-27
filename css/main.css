@@ -178,7 +178,7 @@ body {
 
 .section-stories {
   padding: 15rem 0;
-  background-color: #f7f7f7; }
+  position: relative; }
 
 .composition {
   position: relative; }
@@ -298,9 +298,9 @@ body {
   perspective: 150rem;
   -moz-perspective: 50rem;
   position: relative;
-  height: 42rem; }
+  height: 48rem; }
   .card__side {
-    height: 45rem;
+    height: 48rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -393,7 +393,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   padding: 6rem;
   font-size: 1.6rem;
@@ -406,9 +406,43 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg); }
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    backface-visibility: hidden; }
   .story__image {
-    width: 100%;
-    height: 100%; }
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
   .story__text {
     transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0;
+    transition: all 0.5s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.20; }
+  .bg-video__contant {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
