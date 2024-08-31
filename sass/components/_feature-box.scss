@@ -6,6 +6,11 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: .15);
     transition: transform 0.2s;
+
+    @include respond (tab-port){
+        padding: 2rem;
+    }
+    
     &__icon{
         font-size: 6rem;
         margin-bottom: 0.5rem;
@@ -15,6 +20,9 @@
         $dark-green-color-obacity-8);
         background-clip: text;
         color: transparent;
+
+        @include respond (tab-port){
+    margin-bottom: 0;        }
     }
     &:hover {
         box-shadow: 0 1.5rem 4rem rgba($color-black, $alpha: 0.15);
