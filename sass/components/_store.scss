@@ -5,9 +5,17 @@
     background-color: rgba($color: $white-color, $alpha: 0.5);
     border-radius: 3px;
     padding: 6rem;
+    padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
-    
+    @include respond (tab-port) {
+        width: 100%;
+        padding-left: 7rem;
+        padding: 4rem;
+    }
+    @include respond (phone) {
+       transform: skewX(0);
+    }
    
     &__shape {
         width: 15rem;
@@ -20,6 +28,10 @@
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         backface-visibility: hidden;
+
+        @include respond (phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
     &__image {
         height: 100%;
@@ -29,7 +41,10 @@
     }
     &__text {
         transform: skewX(12deg);
-
+        
+        @include respond (phone) {
+            transform: skewX(0);
+        }
     }
     &__caption {
         position: absolute;
