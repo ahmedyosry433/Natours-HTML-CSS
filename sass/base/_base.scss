@@ -25,3 +25,8 @@ body {
         padding: 0;
     }
 }
+
+::selection {
+        color: $white-color;
+        background-color: $dark-green-color;
+}  
