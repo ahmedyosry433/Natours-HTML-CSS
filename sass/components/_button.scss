@@ -10,10 +10,15 @@
         transition: all 0.4s;
         position: relative;
         font-size: $default-font-size;
-
+        
         //Change For the <button> element
         border: none;
         cursor: pointer;
+        
+        @include respond(phone){
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;   
+        }
     }
     &:hover,
     &:focus {

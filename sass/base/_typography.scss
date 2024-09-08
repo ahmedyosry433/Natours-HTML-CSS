@@ -24,6 +24,11 @@ body {
             font-family: 600;
             font-size: 3rem;
         }
+        @include respond(tab-port){
+            letter-spacing: 1rem;
+            font-family: 600;
+            font-size: 4.2rem;
+        }
     }
     &--sub {
         display: block;
@@ -35,6 +40,10 @@ body {
         @include respond(phone){
             letter-spacing: 0.5rem;
             font-size: 1rem;
+        }
+        @include respond(tab-port){
+            letter-spacing: 0.5rem;
+            font-size: 1.4rem;
         }
     }
 }
@@ -64,6 +73,9 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+    @include respond(phone){
+        text-align: center;       
+    }
     
 }
 .paragraph {

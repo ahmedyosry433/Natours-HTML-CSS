@@ -5,6 +5,8 @@
     -moz-perspective: 50rem;
     position: relative;
     height: 52rem;
+    
+   
     &__side {
         height: 52rem;
         transition: all 0.8s ease;
@@ -56,6 +58,7 @@
         background-size: cover;
         background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+        
 
         &--1 {
             background-image: linear-gradient(to right bottom,  $color-orange-light,$color-orange-dark
@@ -84,6 +87,9 @@
         top: 10rem;
         right: 2rem;
         width: 75%;
+        @include respond(phone){
+            font-size: 2rem;   
+        }
         
     }
     &__heading-span {
@@ -111,18 +117,25 @@
     
     &__details {
         padding: 3rem;
+
         ul {
             list-style: none;
             width: 80%;
             margin: 0 auto;
-            li {
-            text-align: center;
-            color: $small-text-color;
-            font-size: 1.5rem;
-            padding: 1rem;
-            &:not(:last-child){
-                border-bottom: 1px solid $color-grey-light-2;
-            }
+
+                li {
+                    text-align: center;
+                    color: $small-text-color;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    @include respond(phone){
+                        font-size: 1.2rem;
+                        padding: 0.5rem;
+                    }
+                    &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-2;
+                    
+                    }
             }
         }
     } 

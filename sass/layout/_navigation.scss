@@ -22,6 +22,7 @@
         @include respond (phone){
             top: 2rem;
             right: 2rem;
+            
             height: 5rem;
             width: 5rem;
         }
@@ -36,13 +37,17 @@
         background-image: radial-gradient($light-green-color, $dark-green-color);
         z-index: 1000;
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        
         @include respond (tab-port){
             top: 4.5rem;
             right: 4.5rem;
         }
         @include respond (phone){
-            top: 2.5rem;
-            right: 2.5rem;
+            top: 2rem;
+            right: 2rem;
+
+            height: 5rem;
+            width: 5rem;
         }
     }
     &__nav{
@@ -62,10 +67,22 @@
         transform: translate(-50% , -50%);
         list-style: none;
         text-align: center;
+
+        @include respond(phone){
+            top: 40%;
+            width: 90%;
+        }
+
     } 
+
     &__item {
         margin: 1rem;
+        @include respond (phone) {
+            margin-right: 2rem;
+        }
+       
     }
+
     &__link{
         &:link,
         &:visited {
@@ -83,7 +100,9 @@
                 font-size: 2rem;
             }
             @include respond (phone) {
+                background-size: 240%;
                 font-size: 1.5rem;
+                width: 100%;
             }
             span {
                 margin-right: 1rem;
@@ -110,6 +129,10 @@
     &__icon {
         position: relative;
         margin-top: 3.5rem;
+        @include respond(phone){
+            
+            margin-top: 2.7rem;
+        }
         &,
         &::before,
         &::after 
@@ -138,6 +161,7 @@
     }
     &__button:hover &__icon::after {
         top: 1rem;
+      
     }
 
     &__checkbox:checked + &__button &__icon {
