@@ -119,7 +119,8 @@ body {
     @media only screen and (max-width: 37.5em) {
       .header-primary--main {
         letter-spacing: 1rem;
-        font-family: 600; } }
+        font-family: 600;
+        font-size: 3rem; } }
   .header-primary--sub {
     display: block;
     font-size: 2rem;
@@ -129,7 +130,8 @@ body {
     animation-duration: 4s; }
     @media only screen and (max-width: 37.5em) {
       .header-primary--sub {
-        letter-spacing: 0.5rem; } }
+        letter-spacing: 0.5rem;
+        font-size: 1rem; } }
 
 .heading--secondary {
   text-transform: uppercase;
@@ -177,8 +179,15 @@ body {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__logo-box {
+        top: 2rem;
+        left: 2rem; } }
   .header__logo {
     height: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__logo {
+        height: 2rem; } }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -298,8 +307,10 @@ body {
       right: 4rem; } }
   @media only screen and (max-width: 37.5em) {
     .navigation__button {
-      top: 3rem;
-      right: 3rem; } }
+      top: 2rem;
+      right: 2rem;
+      height: 5rem;
+      width: 5rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -317,8 +328,8 @@ body {
       right: 4.5rem; } }
   @media only screen and (max-width: 37.5em) {
     .navigation__background {
-      top: 3.5rem;
-      right: 3.5rem; } }
+      top: 2.5rem;
+      right: 2.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -357,7 +368,7 @@ body {
       font-size: 2rem; } }
   @media only screen and (max-width: 37.5em) {
     .navigation__link:link, .navigation__link:visited {
-      font-size: 1.1rem; } }
+      font-size: 1.5rem; } }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1rem;
     display: inline-block; }
